@@ -23,6 +23,6 @@ public class FcgDbContext : DbContext, IUnitOfWork
         base.OnModelCreating(modelBuilder);
     }
 
-    public Task<int> SaveChangesAsync(CancellationToken ct = default)
-        => base.SaveChangesAsync(ct);
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        => base.SaveChangesAsync(cancellationToken);
 }
