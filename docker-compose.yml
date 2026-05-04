@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: fcg-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fcg
+      POSTGRES_PASSWORD: fcg
+      POSTGRES_DB: fcg
+    ports:
+      - "5432:5432"
+    volumes:
+      - fcg_pg_data:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:7
+    container_name: fcg-mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: fcg
+      MONGO_INITDB_ROOT_PASSWORD: fcg
+    ports:
+      - "27017:27017"
+    volumes:
+      - fcg_mongo_data:/data/db
+
+volumes:
+  fcg_pg_data:
+  fcg_mongo_data:
