@@ -1,0 +1,37 @@
+# .NET build outputs
+bin/
+obj/
+
+# IDE / editor local files
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Test results & coverage
+TestResults/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+*.trx
+
+# Local secrets / configuration
+.env
+.env.*
+appsettings.Local.json
+*.pfx
+secrets.json
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Personal support script for video recording (not part of the official delivery)
+docs/PRESENTATION_SCRIPT.md
