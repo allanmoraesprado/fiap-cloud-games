@@ -100,21 +100,15 @@ As configurações de desenvolvimento já correspondem às credenciais do Docker
 
 ## Migrações do EF Core
 
-Instale o EF Core CLI uma vez (apenas na primeira execução):
+A migração inicial já está incluída no repositório, em `src/FiapCloudGames.Infrastructure/Migrations`. Não é necessário gerá-la novamente.
+
+Instale o EF Core CLI uma vez, se necessário:
 
 ```bash
 dotnet tool install --global dotnet-ef
 ```
 
-Na raiz do repositório, gere a migração inicial:
-
-```bash
-dotnet ef migrations add InitialCreate ^
-  --project src/FiapCloudGames.Infrastructure ^
-  --startup-project src/FiapCloudGames.Api
-```
-
-Aplique as migrações no banco:
+Aplique as migrações existentes no banco:
 
 ```bash
 dotnet ef database update ^
@@ -122,7 +116,7 @@ dotnet ef database update ^
   --startup-project src/FiapCloudGames.Api
 ```
 
-> A API também executa `Database.MigrateAsync()` e popula dados de exemplo no startup, por conveniência durante o desenvolvimento.
+> A API também executa `Database.MigrateAsync()` e popula dados de exemplo no startup, por conveniência durante o desenvolvimento — então, em geral, basta rodar a API.
 
 ---
 
