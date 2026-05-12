@@ -6,7 +6,7 @@
 | **Participante**               | Allan Moraes Prado |
 | **Usuário do Discord**         | allan4653 |
 | **Link do repositório**        | https://github.com/allanmoraesprado/fiap-cloud-games |
-| **Link do vídeo (10–15 min)**  | https://youtu.be/zjmZVo84xKM |
+| **Link do vídeo (10–15 min)**  | https://youtu.be/MemEp5_tmeg |
 
 ---
 
