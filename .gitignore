@@ -25,6 +25,9 @@ appsettings.Local.json
 *.pfx
 secrets.json
 
+# ASP.NET local launch profile
+**/Properties/launchSettings.json
+
 # Logs
 *.log
 logs/
